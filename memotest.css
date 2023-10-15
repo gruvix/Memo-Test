@@ -1,0 +1,10 @@
+.game-row{
+    height: 25vh;
+}
+
+.card{
+    opacity: 0;
+    transition: opacity ease 0.2s;
+    border: 2px solid grey;
+    cursor: pointer;    
+}
