@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  },
+  "name": "memo-test",
+  "version": "1.0.0",
+  "description": "Memo-test para la clase 11 de r/Argentina-Programa",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gruvix/Memo-Test.git"
+  },
+  "author": "Timothy Burton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gruvix/Memo-Test/issues"
+  },
+  "homepage": "https://github.com/gruvix/Memo-Test#readme"
+}
