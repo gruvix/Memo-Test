@@ -126,6 +126,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 cypress.config.js
-cypress/fixtures/example.json
-cypress/support/commands.js
-cypress/support/e2e.js
+cypress/
