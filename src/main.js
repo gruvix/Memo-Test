@@ -2,14 +2,17 @@
 //first click - show game
 //second click - compare cards, remove or hide cards
 //after second click, if cards are 0, end game
-
 document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#start").classList.add("hidden");
     document.querySelector("#game").classList.remove("hidden");
     startGame();
 })
 
+let idFirstCard = null;
+let idSecondCard
+
 function startGame(){
+    idFirstCard = null;
     let array = [];
     fillArrayWithColors(array);
     duplicateArray(array);
@@ -27,9 +30,15 @@ function handleInput(event){
     if(!event.target.classList.contains("card")){
         return;
     }
-    let $card = event.target.classList.toString();
-    $card = $card.replace("card h-100 ","");
-    console.log($card);
+    if(idFirstCard === null){
+        idFirstCard = event.target.id;
+        return;
+    }
+    else{
+        idSecondCard = event.target.id;
+        compareCards();
+    }
+
 }
 
 function setCardsClasses(array){
