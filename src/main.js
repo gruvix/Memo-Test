@@ -64,8 +64,8 @@ function hideCards(){
     const card1 = firstCard;
     const card2 = secondCard;
     setTimeout(() => {
-        card1.style.opacity = 0.3;
-        card2.style.opacity = 0.3;
+        card1.style.opacity = CERO_OPACITY;
+        card2.style.opacity = CERO_OPACITY;
     }, HIDE_CARDS_TIMEOUT)
 }
 
