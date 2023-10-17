@@ -27,6 +27,7 @@ function enableCardInput(){
 }
 
 function handleInput(event){
+
     if(!event.target.classList.contains("card")){
         return;
     }
@@ -57,6 +58,17 @@ function compareCards(){
     if(firstCard.classList === secondCard.classList){
         console.log("LAS CARTAS SON IGUALES");
     }
+}
+
+function hideCards(){
+    const ceroOpacity = 0;
+    const hideCardsTimeout = 400;
+    const card1 = firstCard;
+    const card2 = secondCard;
+    setTimeout(() => {
+        card1.style.opacity = 0.3;
+        card2.style.opacity = 0.3;
+    }, hideCardsTimeout)
 }
 
 function setCardsClasses(array){
