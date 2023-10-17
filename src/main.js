@@ -41,8 +41,24 @@ function handleInput(event){
     else{
         secondCard = event.target;
         secondCard.style.opacity = 1;
+        if(areCardsEqual()){
+            deleteCards();
+        }
+        else{
+            hideCards();
+        }
         resetIds();
     }
+}
+function deleteCards(){
+    const card1 = firstCard;
+    const card2 = secondCard;
+    const DELETE_CARDS_TIMEOUT = 300;
+    card1
+    setTimeout(() => {
+        card1.parentElement.remove();
+        card2.parentElement.remove();
+    }, DELETE_CARDS_TIMEOUT);
 }
 
 function resetIds(){
