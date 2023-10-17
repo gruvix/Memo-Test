@@ -41,8 +41,6 @@ function handleInput(event){
     else{
         secondCard = event.target;
         secondCard.style.opacity = 1;
-        hideCards();
-        compareCards();
         resetIds();
     }
 }
@@ -52,9 +50,12 @@ function resetIds(){
     secondCard = null;
 }
 
-function compareCards(){
-    if(firstCard.classList === secondCard.classList){
-        console.log("LAS CARTAS SON IGUALES");
+function areCardsEqual(){
+    if(firstCard.classList.toString() === secondCard.classList.toString()){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
