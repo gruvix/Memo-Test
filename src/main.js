@@ -27,7 +27,6 @@ function enableCardInput(){
 }
 
 function handleInput(event){
-
     if(!event.target.classList.contains("card")){
         return;
     }
@@ -46,7 +45,6 @@ function handleInput(event){
         compareCards();
         resetIds();
     }
-
 }
 
 function resetIds(){
@@ -61,14 +59,14 @@ function compareCards(){
 }
 
 function hideCards(){
-    const ceroOpacity = 0;
-    const hideCardsTimeout = 400;
+    const CERO_OPACITY = 0;
+    const HIDE_CARDS_TIMEOUT = 400;
     const card1 = firstCard;
     const card2 = secondCard;
     setTimeout(() => {
         card1.style.opacity = 0.3;
         card2.style.opacity = 0.3;
-    }, hideCardsTimeout)
+    }, HIDE_CARDS_TIMEOUT)
 }
 
 function setCardsClasses(array){
