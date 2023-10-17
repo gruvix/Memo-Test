@@ -8,8 +8,6 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#game").classList.remove("hidden");
 })
 
-let array = []
-
 function fillArrayWithColors(array){
     let colors = ["red", "blue", "green", "yellow"];
     colors.forEach(color => {
