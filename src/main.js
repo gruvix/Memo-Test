@@ -1,5 +1,3 @@
-//set 6 color, duplicate, shuffle cards
-
 //handle input:
 //first click - show game
 //second click - compare cards, remove or hide cards
@@ -16,8 +14,10 @@ function createColorsArray(){
 }
 
 function duplicateArray(array){
-    array = array.concat(array)
-    return array;
+    const originalLenght = array.length;
+    for (let index = 0; index < originalLenght; index++) {
+        array.push(array[index])
+    }
 }
 
 function shuffleArray(array) {
