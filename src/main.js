@@ -49,6 +49,16 @@ function resetIds(){
     secondCard = null;
 }
 
+function compareCards(){
+    if(firstCard === secondCard){
+        console.log("MISMA CARTA");
+        return;
+    }
+    if(firstCard.classList === secondCard.classList){
+        console.log("LAS CARTAS SON IGUALES");
+    }
+}
+
 function setCardsClasses(array){
     const $cards = document.querySelectorAll(".card");
     $cards.forEach(($card, index) => {
