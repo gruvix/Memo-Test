@@ -15,6 +15,14 @@ function startGame(){
     duplicateArray(array);
     shuffleArray(array);
     setCardsClasses(array);
+    enableCardInput();
+}
+
+function enableCardInput(){
+    const gameContainer = document.querySelector("#game");
+    gameContainer.onclick = handleInput;
+}
+
 }
 
 function setCardsClasses(array){
