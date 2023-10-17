@@ -1,11 +1,13 @@
 .game-row{
     height: 23vh;
 }
-
+.border{
+    border: 1px solid grey;
+    height: 23vh;
+}
 .card{
     opacity: 0.3;
     transition: opacity ease 0.2s;
-    border: 1px solid grey;
     cursor: pointer; 
     background: fixed;
     background-color: rgb(33, 33, 46);   
