@@ -8,6 +8,13 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#game").classList.remove("hidden");
 })
 
+function setCardsClasses(array){
+    const $cards = document.querySelectorAll(".card");
+    $cards.forEach($card, index => {
+        $card.classList.add(array[index]);
+    });
+}
+
 function fillArrayWithColors(array){
     let colors = ["red", "blue", "green", "yellow"];
     colors.forEach(color => {
