@@ -3,7 +3,7 @@
 }
 
 .card{
-    opacity: 1;
+    opacity: 0.3;
     transition: opacity ease 0.2s;
     border: 1px solid grey;
     cursor: pointer; 
