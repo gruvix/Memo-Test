@@ -1,5 +1,3 @@
-//Start game - hide start
-
 //set 6 color, duplicate, shuffle cards
 
 //handle input:
@@ -11,3 +9,9 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#start").classList.add("hidden");
     document.querySelector("#game").classList.remove("hidden");
 })
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
