@@ -33,12 +33,16 @@ function handleInput(event){
     }
     if(firstCard === null){
         firstCard = event.target;
-        //show first card
+        firstCard.style.opacity = 1;
+        return;
+    }
+    else if(firstCard === event.target){
         return;
     }
     else{
         secondCard = event.target;
-        //show second card
+        secondCard.style.opacity = 1;
+        hideCards();
         compareCards();
         resetIds();
     }
@@ -51,10 +55,6 @@ function resetIds(){
 }
 
 function compareCards(){
-    if(firstCard === secondCard){
-        console.log("MISMA CARTA");
-        return;
-    }
     if(firstCard.classList === secondCard.classList){
         console.log("LAS CARTAS SON IGUALES");
     }
