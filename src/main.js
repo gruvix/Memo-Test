@@ -19,10 +19,17 @@ function startGame(){
 }
 
 function enableCardInput(){
-    const gameContainer = document.querySelector("#game");
-    gameContainer.onclick = handleInput;
+    const $gameContainer = document.querySelector("#game");
+    $gameContainer.onclick = handleInput;
 }
 
+function handleInput(event){
+    if(!event.target.classList.contains("card")){
+        return;
+    }
+    let $card = event.target.classList.toString();
+    $card = $card.replace("card h-100 ","");
+    console.log($card);
 }
 
 function setCardsClasses(array){
