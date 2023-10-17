@@ -8,9 +8,13 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#game").classList.remove("hidden");
 })
 
-function createColorsArray(){
+let array = []
+
+function fillArrayWithColors(array){
     let colors = ["red", "blue", "green", "yellow"];
-    return colors;
+    colors.forEach(color => {
+        array.push(color);
+    });
 }
 
 function duplicateArray(array){
