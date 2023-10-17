@@ -25,7 +25,7 @@ function setCardsClasses(array){
 }
 
 function fillArrayWithColors(array){
-    let colors = ["red", "blue", "green", "yellow"];
+    let colors = ["red", "blue", "green", "yellow", "pink", "orange"];
     colors.forEach(color => {
         array.push(color);
     });
