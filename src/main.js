@@ -19,7 +19,7 @@ function startGame(){
 
 function setCardsClasses(array){
     const $cards = document.querySelectorAll(".card");
-    $cards.forEach($card, index => {
+    $cards.forEach(($card, index) => {
         $card.classList.add(array[index]);
     });
 }
