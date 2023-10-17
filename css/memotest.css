@@ -3,7 +3,7 @@
 }
 
 .card{
-    opacity: 0.5;
+    opacity: 1;
     transition: opacity ease 0.2s;
     border: 1px solid grey;
     cursor: pointer; 
@@ -32,7 +32,7 @@
   }
   
   .pink {
-    background-color: pink;
+    background-color: orange;
   }
   
   .purple {
