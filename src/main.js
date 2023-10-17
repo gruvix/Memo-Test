@@ -6,7 +6,16 @@
 document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#start").classList.add("hidden");
     document.querySelector("#game").classList.remove("hidden");
+    startGame();
 })
+
+function startGame(){
+    let array = [];
+    fillArrayWithColors(array);
+    duplicateArray(array);
+    shuffleArray(array);
+    setCardsClasses(array);
+}
 
 function setCardsClasses(array){
     const $cards = document.querySelectorAll(".card");
