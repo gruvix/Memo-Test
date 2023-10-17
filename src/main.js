@@ -8,11 +8,11 @@ document.querySelector("#start").addEventListener("click", () => {
     startGame();
 })
 
-let idFirstCard = null;
-let idSecondCard
+let firstCard = null;
+let secondCard
 
 function startGame(){
-    idFirstCard = null;
+    firstCard = null;
     let array = [];
     fillArrayWithColors(array);
     duplicateArray(array);
@@ -30,12 +30,14 @@ function handleInput(event){
     if(!event.target.classList.contains("card")){
         return;
     }
-    if(idFirstCard === null){
-        idFirstCard = event.target.id;
+    if(firstCard === null){
+        firstCard = event.target;
+        //show first card
         return;
     }
     else{
-        idSecondCard = event.target.id;
+        secondCard = event.target;
+        //show second card
         compareCards();
     }
 
