@@ -39,8 +39,14 @@ function handleInput(event){
         secondCard = event.target;
         //show second card
         compareCards();
+        resetIds();
     }
 
+}
+
+function resetIds(){
+    firstCard = null;
+    secondCard = null;
 }
 
 function setCardsClasses(array){
