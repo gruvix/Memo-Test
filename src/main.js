@@ -28,6 +28,7 @@ function enableCardInput(){
 
 function handleInput(event){
     console.log("click")
+    console.log("click NUEVO")
     if(!event.target.classList.contains("card")){
         return;
     }
