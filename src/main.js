@@ -27,6 +27,8 @@ function enableCardInput(){
 }
 
 function handleInput(event){
+    const MAXIMUN_OPACITY = 1;
+    const CARD_DELETE_TIMEOUT = 300;
     if(!event.target.classList.contains("card")){
         return;
     }
@@ -40,7 +42,7 @@ function handleInput(event){
     }
     else{
         secondCard = event.target;
-        secondCard.style.opacity = 1;
+        secondCard.style.opacity = MAXIMUN_OPACITY;
         if(areCardsEqual()){
             deleteCards();
         }
