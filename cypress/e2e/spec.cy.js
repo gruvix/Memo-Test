@@ -1,6 +1,6 @@
-describe('visits page', () => {
-  it('finds the page', () => {
-    cy.visit('http://localhost:8080')
+describe('visits page and checks title', () => {
+  it('The title is "MemoTest"', () => {
+    cy.visit('/')
     cy.get('h1').contains('MemoTest')
   })
 })
