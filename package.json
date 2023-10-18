@@ -10,7 +10,7 @@
     "cypress": "^13.3.1"
   },
   "scripts": {
-    "start": "http-server",
+    "start": "http-server -c-1 -p 8000",
     "cypress-dev": "cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
