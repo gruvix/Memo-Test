@@ -4,3 +4,11 @@ describe('visits page and checks title', () => {
     cy.get('h1').contains('MemoTest')
   })
 })
+
+describe('tests the game', () => {
+  it('finishes de game', () => {
+    cy.visit('/')
+    cy.get('#start').click()
+  })
+})
+
