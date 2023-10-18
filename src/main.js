@@ -27,6 +27,7 @@ function enableCardInput(){
 }
 
 function handleInput(event){
+    console.log("click")
     if(!event.target.classList.contains("card")){
         return;
     }
