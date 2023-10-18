@@ -9,6 +9,8 @@ describe('tests the game', () => {
   it('finishes de game', () => {
     cy.visit('/')
     cy.get('#start').click()
+    cy.get('#game').should('be.visible')
+    cy.get('.card').should('have.length', 16)
   })
 })
 
