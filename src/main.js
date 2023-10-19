@@ -61,7 +61,7 @@ function handleInput(event){
 }
 function endGame(){
     document.querySelector("#game").classList.add("hidden");
-
+    document.querySelector("#end").classList.remove("hidden");
 }
 function hideFirstCard(){
     firstCard.style.opacity = 0;
