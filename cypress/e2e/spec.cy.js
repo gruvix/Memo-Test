@@ -39,6 +39,15 @@ context('MemoTest', () => {
             });
           });
 
+          it('clicks 2 matching cards and they disappear', () => {
+            cy.get('#start').click().get('.card').then($cards => {
+              pairsMap = getCardsPairs($cards)
+              pairsList = Object.values(pairsMap)
+              pairsList[0][0].click();
+              pairsList[0][1].click();
+              cy.get(pairsList[0][0]).should('not.be.visible')
+            });
+          });
 
     });
   });
