@@ -50,7 +50,16 @@ function handleInput(event){
             hideCards();
         }
         resetFirstAndSecondCard();
+        setTimeout(() => {//must wait for cards to be destroyed to check for remaining cards
+            const remainingCards = document.querySelectorAll(".card").length;
+            if(remainingCards === 0){
+                endGame();
+            }
+        }, CARD_DELETE_TIMEOUT);
     }
+}
+function endGame(){
+    console.log("GANASTE")
 }
 function deleteCards(DELETE_CARDS_TIMEOUT){
     const card1 = firstCard;
