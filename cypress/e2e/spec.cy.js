@@ -49,7 +49,7 @@ context('MemoTest', () => {
             });
           });
 
-          it('clicks all matching cards and they disappear', () => {
+          it('clicks all matching cards in order and they disappear', () => {
             cy.get('#start').click().get('.card').then($cards => {
               pairsMap = getCardsPairs($cards)
               pairsList = Object.values(pairsMap)
