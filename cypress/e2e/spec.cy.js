@@ -57,7 +57,20 @@ context('MemoTest', () => {
             pairsList[i][0].click();
             pairsList[i][1].click();
           }
-          cy.get('.card').should('have.length', 0)
+          cy.get('.card').should('have.length', 0);
+        });
+      });
+
+      it('counts attemps and checks restart button', () => {
+        cy.get('#start').click().get('.card').then($cards => {
+          pairsMap = getCardsPairs($cards)
+          pairsList = Object.values(pairsMap)
+          for(let i = 0; i < pairsList.length; i++){
+            pairsList[i][0].click();
+            pairsList[i][1].click();
+          }
+          cy.get('#restart').should('be.visible');
+          cy.get('#attemps').should('be', pairsList.length);
         });
       });
     });
