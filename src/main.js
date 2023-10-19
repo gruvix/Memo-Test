@@ -64,11 +64,11 @@ function handleInput(event){
     }
 }
 function showAttempts(){
-    document.querySelector('#attemps').classList.remove('hidden')
+    document.querySelector('#attemps-title').classList.remove('hidden')
 }
 function increaseAttempts(){
     attemps++;
-    document.querySelector("#attemps").innerText = `Attemps: ${attemps}`;
+    document.querySelector("#attemps").innerText = attemps;
 }
 function endGame(){
     document.querySelector("#game").classList.add("hidden");
