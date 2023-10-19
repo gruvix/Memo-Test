@@ -38,7 +38,8 @@ function handleInput(event){
         return;
     }
     else if(firstCard === event.target){
-        return;
+        hideFirstCard();
+        resetFirstCard();
     }
     else{
         secondCard = event.target;
@@ -59,7 +60,13 @@ function handleInput(event){
     }
 }
 function endGame(){
-    console.log("GANASTE")
+    document.querySelector("#game").classList.add("hidden");
+}
+function hideFirstCard(){
+    firstCard.style.opacity = 0;
+}
+function resetFirstCard(){
+    firstCard = null;
 }
 function deleteCards(DELETE_CARDS_TIMEOUT){
     const card1 = firstCard;
