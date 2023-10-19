@@ -16,18 +16,26 @@ context('MemoTest', () => {
     const CARDS_TOTAL_LENGHT = 12
     it('has 12 cards', () => {
       cy.get('.card').should('have.length', CARDS_TOTAL_LENGHT)
-    })
+    });
 
     it('shows the game container', () => {
       cy.get("#start").click().get('#game').should('be.visible')
-    })
+    });
 
     it('shows a card', () => {
       cy.get('#start').click().get('.card').first().click().should('be.visible')
     })
+function getCardsPairs(cards) {
+  const pairs = {};
+  cards.each((index, card) => {
+    const colorClass = card.className.replace('card h-100', '');
 
-    // it('selects 2 different cards and they dont disappear', () => {
-    //   cy.get('#start').click().selectAllCards().sort().
-    // })
-  })
-})
+    if(pairs[colorClass]) {
+      pairs[colorClass].push(card);
+    } else { 
+      pairs[colorClass] = [card];
+    }
+  });
+  return pairs;
+}
+
