@@ -21,6 +21,7 @@ function startGame(){
     shuffleArray(array);
     setCardsClasses(array);
     enableCardInput();
+    showAttempts();
 }
 
 function enableCardInput(){
@@ -62,8 +63,12 @@ function handleInput(event){
         }, CARD_DELETE_TIMEOUT);
     }
 }
+function showAttempts(){
+    document.querySelector('#attemps').classList.remove('hidden')
+}
 function increaseAttempts(){
     attemps++;
+    document.querySelector("#attemps").innerText = `Attemps: ${attemps}`;
 }
 function endGame(){
     document.querySelector("#game").classList.add("hidden");
