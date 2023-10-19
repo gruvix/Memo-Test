@@ -3,9 +3,6 @@ context('MemoTest', () => {
 
 
   describe('plays the game', () => {
-    // it('shows the game container', () => {
-    //   cy.get('#game').should('be.visible')
-    // })
     beforeEach(() => {
       cy.visit('/')
     });
@@ -22,6 +19,11 @@ context('MemoTest', () => {
     it('has 12 cards', () => {
       cy.get('.card').should('have.length', CARDS_TOTAL_LENGHT)
     })
+    it('shows the game container', () => {
+      cy.get("#start").click().get('#game').should('be.visible')
+    })
+
 
   })
 })
+
