@@ -24,7 +24,23 @@ context('MemoTest', () => {
 
     it('shows a card', () => {
       cy.get('#start').click().get('.card').first().click().should('be.visible')
-    })
+    });
+
+    describe('Solve the game', () => {
+      let pairsMap, pairsList;
+          it('clicks 2 different cards and they dont disappear', () => {
+            cy.get('#start').click().get('.card').then($cards => {
+              pairsMap = getCardsPairs($cards)
+              pairsList = Object.values(pairsMap)
+              pairsList[0][0].click();
+              pairsList[1][0].click();
+              cy.get(pairsList[0][0]).should('be.visible')
+            });
+
+
+    });
+  });
+});
 function getCardsPairs(cards) {
   const pairs = {};
   cards.each((index, card) => {
