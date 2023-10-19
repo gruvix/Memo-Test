@@ -28,38 +28,38 @@ context('MemoTest', () => {
 
     describe('Solve the game', () => {
       let pairsMap, pairsList;
-          it('clicks 2 different cards and they dont disappear', () => {
-            cy.get('#start').click().get('.card').then($cards => {
-              pairsMap = getCardsPairs($cards)
-              pairsList = Object.values(pairsMap)
-              pairsList[0][0].click();
-              pairsList[1][0].click();
-              cy.get(pairsList[0][0]).should('be.visible')
-              cy.get(pairsList[1][0]).should('be.visible')
-            });
-          });
+      it('clicks 2 different cards and they dont disappear', () => {
+        cy.get('#start').click().get('.card').then($cards => {
+          pairsMap = getCardsPairs($cards)
+          pairsList = Object.values(pairsMap)
+          pairsList[0][0].click();
+          pairsList[1][0].click();
+          cy.get(pairsList[0][0]).should('be.visible')
+          cy.get(pairsList[1][0]).should('be.visible')
+        });
+      });
 
-          it('clicks 2 matching cards and they disappear', () => {
-            cy.get('#start').click().get('.card').then($cards => {
-              pairsMap = getCardsPairs($cards)
-              pairsList = Object.values(pairsMap)
-              pairsList[0][0].click();
-              pairsList[0][1].click();
-              cy.get(pairsList[0][0]).should('not.be.visible')
-            });
-          });
+      it('clicks 2 matching cards and they disappear', () => {
+        cy.get('#start').click().get('.card').then($cards => {
+          pairsMap = getCardsPairs($cards)
+          pairsList = Object.values(pairsMap)
+          pairsList[0][0].click();
+          pairsList[0][1].click();
+          cy.get(pairsList[0][0]).should('not.be.visible')
+        });
+      });
 
-          it('clicks all matching cards in order and they disappear', () => {
-            cy.get('#start').click().get('.card').then($cards => {
-              pairsMap = getCardsPairs($cards)
-              pairsList = Object.values(pairsMap)
-              for(let i = 0; i < pairsList.length; i++){
-                pairsList[i][0].click();
-                pairsList[i][1].click();
-              }
-              cy.get('.card').should('have.length', 0)
-            });
-          });
+      it('clicks all matching cards in order and they disappear', () => {
+        cy.get('#start').click().get('.card').then($cards => {
+          pairsMap = getCardsPairs($cards)
+          pairsList = Object.values(pairsMap)
+          for(let i = 0; i < pairsList.length; i++){
+            pairsList[i][0].click();
+            pairsList[i][1].click();
+          }
+          cy.get('.card').should('have.length', 0)
+        });
+      });
     });
   });
 });
