@@ -70,7 +70,7 @@ context('MemoTest', () => {
             pairsList[i][1].click();
           }
           cy.get('#restart').should('be.visible');
-          cy.get('#attemps').should('be', pairsList.length);
+          cy.get('#attemps').should('contain', pairsList.length);
         });
       });
     });
