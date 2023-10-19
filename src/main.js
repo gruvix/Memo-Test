@@ -34,7 +34,7 @@ function handleInput(event){
     }
     if(firstCard === null){
         firstCard = event.target;
-        firstCard.style.opacity = 1;
+        firstCard.style.opacity = MAXIMUN_OPACITY;
         return;
     }
     else if(firstCard === event.target){
@@ -61,6 +61,7 @@ function handleInput(event){
 }
 function endGame(){
     document.querySelector("#game").classList.add("hidden");
+
 }
 function hideFirstCard(){
     firstCard.style.opacity = 0;
