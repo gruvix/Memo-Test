@@ -44,7 +44,7 @@ function handleInput(event){
         secondCard = event.target;
         secondCard.style.opacity = MAXIMUN_OPACITY;
         if(areCardsEqual()){
-            deleteCards();
+            deleteCards(CARD_DELETE_TIMEOUT);
         }
         else{
             hideCards();
@@ -52,11 +52,9 @@ function handleInput(event){
         resetIds();
     }
 }
-function deleteCards(){
+function deleteCards(DELETE_CARDS_TIMEOUT){
     const card1 = firstCard;
     const card2 = secondCard;
-    const DELETE_CARDS_TIMEOUT = 300;
-    card1
     setTimeout(() => {
         card1.parentElement.remove();
         card2.parentElement.remove();
