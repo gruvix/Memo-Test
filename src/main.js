@@ -67,7 +67,7 @@ function increaseAttempts(){
 }
 function endGame(){
     document.querySelector("#game").classList.add("hidden");
-    document.querySelector("#start").classList.remove("hidden");
+    document.querySelector("#restart").classList.remove("hidden");
 }
 function hideFirstCard(){
     firstCard.style.opacity = 0;
@@ -136,3 +136,7 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+function restartPage(){
+    location.reload();
+}
+document.querySelector("#restart").addEventListener("click", restartPage);
