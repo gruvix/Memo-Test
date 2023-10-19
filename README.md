@@ -15,8 +15,9 @@ se puede probar usar el programa yendo en tu navegador a
 http://localhost:8000/
 
 ## Créditos
-[Curso](https://argentinaprograma.com/)
-[Clase N#11](https://www.youtube.com/watch?v=3PwEu0YJnX8&list=PLs73pLtDNXD893LSF8fP-EfZbGWMECmnc&index=11)
+[Curso de Argentina Programa](https://argentinaprograma.com/)
+
+[Clase N#11 de Argentina Programa](https://www.youtube.com/watch?v=3PwEu0YJnX8&list=PLs73pLtDNXD893LSF8fP-EfZbGWMECmnc&index=11)
 
 ## Pruebas 
 Para hacer las pruebas en Cypress:
