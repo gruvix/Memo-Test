@@ -9,9 +9,11 @@ document.querySelector("#start").addEventListener("click", () => {
 })
 
 let firstCard = null;
-let secondCard
+let secondCard;
+let attemps;
 
 function startGame(){
+    attemps = 0;
     firstCard = null;
     let array = [];
     fillArrayWithColors(array);
@@ -42,6 +44,7 @@ function handleInput(event){
         resetFirstCard();
     }
     else{
+        increaseAttempts();
         secondCard = event.target;
         secondCard.style.opacity = MAXIMUN_OPACITY;
         if(areCardsEqual()){
@@ -58,6 +61,9 @@ function handleInput(event){
             }
         }, CARD_DELETE_TIMEOUT);
     }
+}
+function increaseAttempts(){
+    attemps++;
 }
 function endGame(){
     document.querySelector("#game").classList.add("hidden");
