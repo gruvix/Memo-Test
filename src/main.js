@@ -49,7 +49,7 @@ function handleInput(event){
         else{
             hideCards();
         }
-        resetIds();
+        resetFirstAndSecondCard();
     }
 }
 function deleteCards(DELETE_CARDS_TIMEOUT){
@@ -61,7 +61,7 @@ function deleteCards(DELETE_CARDS_TIMEOUT){
     }, DELETE_CARDS_TIMEOUT);
 }
 
-function resetIds(){
+function resetFirstAndSecondCard(){
     firstCard = null;
     secondCard = null;
 }
