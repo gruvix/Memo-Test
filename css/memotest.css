@@ -1,0 +1,45 @@
+.game-row{
+    height: 23vh;
+}
+.border{
+    border: 1px solid grey;
+    height: 23vh;
+}
+.card{
+    opacity: 0;
+    transition: opacity ease 0.2s;
+    cursor: pointer; 
+    background: fixed;
+    background-color: rgb(33, 33, 46);   
+}
+
+.hidden{
+    display: none;
+}
+
+.red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  .removed{
+    background-color: darkgray;
+  }
