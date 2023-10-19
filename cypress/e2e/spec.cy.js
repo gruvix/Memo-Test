@@ -89,4 +89,3 @@ function getCardsPairs(cards) {
   });
   return pairs;
 }
-
