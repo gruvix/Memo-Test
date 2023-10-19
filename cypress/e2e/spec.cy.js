@@ -35,7 +35,9 @@ context('MemoTest', () => {
               pairsList[0][0].click();
               pairsList[1][0].click();
               cy.get(pairsList[0][0]).should('be.visible')
+              cy.get(pairsList[1][0]).should('be.visible')
             });
+          });
 
 
     });
